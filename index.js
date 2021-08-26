@@ -47,7 +47,7 @@ if (!process.env.GROUP_REPLACEMENT_MESSAGE) {
     "Missing GROUP_REPLACEMENT_MESSAGE env variable, using the default one"
   );
   group_replacement_message =
-    "Message by {USER} with Amazon affiliate link:\n\n{MESSAGE}";
+    " {USER} short link:\n\n{MESSAGE}";
 } else {
   group_replacement_message = process.env.GROUP_REPLACEMENT_MESSAGE;
 }
@@ -55,8 +55,8 @@ if (!process.env.GROUP_REPLACEMENT_MESSAGE) {
 var amazon_tld;
 
 if (!process.env.AMAZON_TLD) {
-  console.log("Missing AMAZON_TLD env variable, using the default one (.com)");
-  amazon_tld = "com";
+  console.log("Missing AMAZON_TLD env variable, using the default one (.in)");
+  amazon_tld = "in";
 } else {
   amazon_tld = process.env.AMAZON_TLD;
 }
